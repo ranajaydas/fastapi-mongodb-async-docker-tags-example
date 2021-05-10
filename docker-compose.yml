@@ -1,0 +1,16 @@
+version: '3'
+services:
+    db:
+        image: mongo
+        env_file:
+            - .env
+    web:
+        build: .
+        volumes:
+            - .:/code
+        ports:
+            - "8000:8000"
+        depends_on:
+            - db
+        env_file:
+            - .env

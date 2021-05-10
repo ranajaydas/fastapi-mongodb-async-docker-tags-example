@@ -1,0 +1,13 @@
+.idea/
+.gradle
+build
+
+*__pycache__*
+venv/
+.env
+*.pyc
+*.sqlite3
+
+# Pytest files
+htmlcov
+*.coverage

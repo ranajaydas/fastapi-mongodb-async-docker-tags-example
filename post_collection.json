@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "13dbcaf3-8363-4d06-b01b-34e24a825486",
+		"name": "Fast Mongo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all Articles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/v1/article",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"article"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a New Article",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"content\": \"New Article Here\",\r\n  \"tags\": [\"hello\", \"funny\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/v1/article",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"article"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete all Articles",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/v1/article",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"article"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a specific Article",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/v1/article/609901b2f905eb26f75adedd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"article",
+						"609901b2f905eb26f75adedd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a specific Article",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"content\": \"Not funny anymore\",\r\n  \"tags\": [\r\n    \"hoho\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/v1/article/609901b2f905eb26f75adedd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"article",
+						"609901b2f905eb26f75adedd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a specific Article",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/v1/article/609901b2f905eb26f75adedd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"article",
+						"609901b2f905eb26f75adedd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Tags",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/v1/tags",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"tags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Notes with specific Tag",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/v1/article/tag/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"article",
+						"tag",
+						"hello"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
