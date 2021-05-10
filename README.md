@@ -1,5 +1,9 @@
 ![](./logo.png)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
+
+
 # What is this?
 A simple REST API example using [**FastAPI**](https://fastapi.tiangolo.com/), async [**MongoDB**](https://www.mongodb.com/) & [**Docker**](https://www.docker.com/), featuring a full test suite and support for tags.
 
@@ -45,7 +49,7 @@ Testing is really easy thanks to [**pytest**](https://pytest.org)!
 6. Open the html file `htmlcov/index.html`
 
 ## How to stop the app and clean up
-1. To stop the app, press `Ctrl + C` inside the command line from step 4.
+1. To stop the app, press `Ctrl + C` inside the command line from step 4 of **How to launch the app**.
 2. To stop Docker Compose, run the following command:
     ```bash
     docker-compose down
