@@ -1,8 +1,8 @@
 ![](./logo.png)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-
-
+[![Build Status](https://www.travis-ci.com/ranajaydas/fastapi-mongodb-async-docker-tags-example.svg?branch=main)](https://www.travis-ci.com/ranajaydas/fastapi-mongodb-async-docker-tags-example)
+[![codecov](https://codecov.io/gh/ranajaydas/fastapi-mongodb-async-docker-tags-example/branch/main/graph/badge.svg)](https://codecov.io/gh/ranajaydas/fastapi-mongodb-async-docker-tags-example)
 
 # What is this?
 A simple REST API example using [**FastAPI**](https://fastapi.tiangolo.com/), async [**MongoDB**](https://www.mongodb.com/) & [**Docker**](https://www.docker.com/), featuring a full test suite and support for tags.
@@ -10,7 +10,7 @@ A simple REST API example using [**FastAPI**](https://fastapi.tiangolo.com/), as
 ## How to launch the app
 1. [Install Docker](https://www.docker.com/products/docker-desktop) on your machine.
 2. Download this repo.
-3. Create a .env file with the following variables:
+3. Create a `.env` file with the following variables (you can also use the `.env.example` file):
     ```properties 
     MONGO_INITDB_ROOT_USERNAME=YourUserName
     MONGO_INITDB_ROOT_PASSWORD=YourPassword
