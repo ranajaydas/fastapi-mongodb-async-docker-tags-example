@@ -11,6 +11,7 @@ script:
   - cp .env.example .env
   - docker-compose up -d
   - docker-compose exec web pytest -v
+  - docker-compose exec coverage run app/test_main.py
 
 after_success:
   - codecov
