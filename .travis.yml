@@ -7,9 +7,6 @@ services:
 install:
   - pip install codecov
 
-env:
-  - MONGO_INITDB_ROOT_USERNAME=SomeUsername MONGO_INITDB_ROOT_PASSWORD=SomePassword MONGO_HOST=db MONGO_PORT=27017
-
 script:
   - cp .env.example .env
   - docker-compose up -d
