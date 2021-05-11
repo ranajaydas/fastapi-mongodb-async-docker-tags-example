@@ -2,11 +2,10 @@ language: python
 python: 3.8
 
 services:
-  - docker
   - mongodb
 
 before_install:
-  - pip install docker-compose
+  - pip install requirements.txt
 
 install:
   - pip install codecov
@@ -15,7 +14,7 @@ env:
   - MONGO_INITDB_ROOT_USERNAME=SomeUsername MONGO_INITDB_ROOT_PASSWORD=SomePassword MONGO_HOST=db MONGO_PORT=27017
 
 script:
-  - docker-compose run app sh -c "cp .env.example .env && pytest"
+  - pytest
 
 after_success:
   - codecov
