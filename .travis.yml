@@ -3,6 +3,7 @@ python: 3.8
 
 services:
   - docker
+  - mongodb
 
 before_install:
   - pip install docker-compose
@@ -11,10 +12,7 @@ install:
   - pip install codecov
 
 env:
-  - MONGO_INITDB_ROOT_USERNAME=SomeUsername
-  - MONGO_INITDB_ROOT_PASSWORD=SomePassword
-  - MONGO_HOST=db
-  - MONGO_PORT=27017
+  - MONGO_INITDB_ROOT_USERNAME=SomeUsername MONGO_INITDB_ROOT_PASSWORD=SomePassword MONGO_HOST=db MONGO_PORT=27017
 
 script:
   - docker-compose run app sh -c "pytest"
