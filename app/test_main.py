@@ -4,13 +4,18 @@ from fastapi.testclient import TestClient
 from pymongo import MongoClient
 from pytest import fixture
 
-from .database import get_mongo_uri
+from .database import get_mongo_uri, get_database, db
 from .main import app
+
+
+async def override_get_database():
+    yield await get_database('test_articles')
 
 
 @fixture(scope='session')
 def test_client():
     """Create a FastAPI test client for all the tests"""
+    app.dependency_overrides[get_database] = override_get_database
     with TestClient(app) as test_client:
         yield test_client
 
@@ -19,7 +24,7 @@ def test_client():
 def articles_db():
     """Create a synchronous DB connection for tests"""
     db_client = MongoClient(get_mongo_uri())
-    articles_db = db_client.articles.articles
+    articles_db = db_client['test_articles'].articles
 
     # Clear DB before every test
     articles_db.delete_many({})

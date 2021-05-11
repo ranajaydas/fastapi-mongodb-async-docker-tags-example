@@ -22,9 +22,9 @@ def get_mongo_uri() -> str:
     return mongo_uri
 
 
-async def get_database() -> AsyncIOMotorClient:
+async def get_database(db_name: str = 'articles') -> AsyncIOMotorClient:
     """Returns an asynchronous DB client"""
-    return db.client
+    return db.client[db_name]
 
 
 async def startup_db_client() -> None:
