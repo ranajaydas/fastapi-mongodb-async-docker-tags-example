@@ -1,0 +1,17 @@
+language: python
+python: 3.8
+
+services:
+  - docker
+
+before_install:
+  - pip install docker-compose
+
+install:
+  - pip install codecov
+
+script:
+  - docker-compose exec web pytest -v
+
+after_success:
+  - codecov
